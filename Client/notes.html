@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/model.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Handlee&family=Indie+Flower&display=swap"
+        rel="stylesheet"
+    />
+    <title>Notaty</title>
+</head>
+<body onload="updateNotesTable()">
+    <!-- Navigation Bar -->
+    <div class="navigation-bar">
+        <div class="navigation-container">
+            <img src="./images/note.png" alt="Note">
+            <h1>Notaty</h1>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="searchBar">
+        <button
+            id="addBtn"
+            class="action-button"
+            onclick="openAddModel()"
+            type="button">
+            Add
+        </button>
+        <input
+            id="searchInput"
+            type="text"
+            class="search-input"
+            placeholder="Search for note by title ..."/>
+        <button 
+            id="searchBtn" 
+            class="action-button"
+            onclick="searchNotes()" 
+            type="button">
+            Search
+        </button>
+    </div>
+
+    <!-- Notes table -->
+    <table id="notesTable">
+        <colgroup>
+            <col span="1" style="width: 20%;" />
+            <col span="1" style="width: 50%;" />
+            <col span="1" style="width: 20%;" />
+            <col span="1" style="width: 10%;" />
+        </colgroup>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Last Updated</th>
+            <th></th>
+        </tr>
+    </table>
+
+    <!-- Add Note Model -->
+    <div id="addNoteModel" class="model">
+        <!-- Moel content -->
+        <div class="model-content">
+            <div class="model-header">
+                <span id="closeAdd" class="close">&times;</span>
+                <h2>New Note</h2>
+            </div>
+            <div class="model-body">
+                <div class="row">
+                    <div class="left">
+                        <p>Title</p>
+                    </div>
+                    <div class="right">
+                        <input id="addTitle" type="text" class="model-input"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        <p>Content</p>
+                    </div>
+                    <div class="right">
+                        <textarea id="addContent"></textarea>
+                    </div>
+                </div>
+                <p id="addError" class="error"></p>
+            </div>
+            <div class="model-footer">
+                <button
+                    id="saveAddNoteBtn"
+                    onclick="saveNewNote()"
+                    type="button"
+                    class="save action-button">
+                    Save
+                </button>
+                <button 
+                    id="cancelAddNoteBtn" 
+                    type="button" 
+                    class="cansel action-button">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Note Modal -->
+    <div id="editNoteModel" class="model">
+        <!-- Modal content -->
+        <div class="model-content">
+            <div class="model-header">
+                <span id="closeEdit" class="close">&times;</span>
+                <h2>Edit Note</h2>
+            </div>
+            <div class="model-body">
+                <div class="row">
+                    <div class="left">
+                        <p>Title</p>
+                    </div>
+                    <div class="right">
+                        <input id="editTitle" type="text" class="model-input" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        <p>Content</p>
+                    </div>
+                    <div class="right">
+                        <textarea id="editContent"></textarea>
+                    </div>
+                </div>
+                <p id="editError" class="error"></p>
+            </div>
+            <div class="model-footer">
+                <button 
+                    id="saveEditNoteBtn" 
+                    class="save action-button"
+                    onclick="saveEditNote()" 
+                    type="button"> 
+                    Save
+                </button>
+                <button 
+                    id="cancelEditNoteBtn"
+                    class="cansel action-button" 
+                    type="button">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/note-client.js"></script>
+    <script src="./scripts/note-handler.js"></script>
+    <script src="./scripts/model-handler.js"></script>
+</body>
+</html>
