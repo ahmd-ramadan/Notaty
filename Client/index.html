@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Client/styles/style.css">
-    <link rel="stylesheet" href="./Client/styles/model.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Handlee&family=Indie+Flower&display=swap"
         rel="stylesheet"
@@ -15,12 +15,13 @@
     <!-- Navigation Bar -->
     <div class="navigation-bar">
         <div class="navigation-container">
-            <img src="./Client/images/note.png" alt="Note">
+            <img src="./images/note.png" alt="Note">
             <h1>Notaty</h1>
         </div>
     </div>
 
-    <div id="settingBar" class="setting-bar">
+    <!-- Customize Setting -->
+    <!-- <div id="settingBar" class="setting-bar">
         <div class="container">
             <ul>
                 <li onclick="chooseFont()">Font Size</li>
@@ -28,17 +29,19 @@
                 <li onabort="choosecolorTable()">Table Color</li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <div id="fontSizeModel" class="fmodel">
 
     </div>
+
     <div id="fontColorModel" class="fmodel">
 
     </div>
-    <div id="table ColorModel" class="fmodel">
 
+    <div id="table ColorModel" class="fmodel"></div>
     </div>
+
     <!-- Search Bar -->
     <div id="searchBar">
         <button
@@ -168,8 +171,8 @@
         </div>
     </div>
 
-    <script src="./Client/scripts/note-client.js"></script>
-    <script src="./Clien/scripts/note-handler.js"></script>
-    <script src="./Clien/scripts/model-handler.js"></script>
+    <script src="./scripts/note-client.js"></script>
+    <script src="./scripts/note-handler.js"></script>
+    <script src="./scripts/model-handler.js"></script>
 </body>
 </html>
