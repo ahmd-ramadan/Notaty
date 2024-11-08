@@ -48,6 +48,7 @@ body {
     margin: 20px auto;
 }
 
+
 .search-input {
     width: 60%;
     max-width: 400px;
@@ -68,11 +69,12 @@ body {
     cursor: pointer;
     border-radius: 4px;
     transition: var(--main-transition);
+    max-width: 400px;
 }
 
 .action-button:hover {
     background-color: white;
-    color: #008cba;
+    color: #ba9e00;
     font-size: 18px;
 }
 
@@ -159,6 +161,7 @@ tr:first-child {
 
     #searchBar {
         flex-direction: column;
+        margin: 20px 8px;
     }
 
     table th,

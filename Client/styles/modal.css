@@ -76,13 +76,13 @@
 .model-header, .model-footer {
     text-align: center;
     padding: 15px;
-    border-bottom: 1px solid #ddd;
     color: var(--text-color);
 }
 
 .model-header {
     font-size: 1.5rem;
     font-weight: bold;
+    border-bottom: 1px solid #ddd;
 }
 
 .model-body {
@@ -133,6 +133,7 @@ textarea {
 
 .action-button:hover {
     background-color: #005f99;
+    color: #ba9e00
 }
 
 .cansel {
