@@ -107,12 +107,12 @@ body {
 
 .action-button:hover {
   background-color: white;
-  color: #00df8e;
+  color: #FFC10D;
   font-size: 18px;
 }
 
 .action-button:focus {
-  outline: 2px solid #008cba;
+  outline: 2px solid #FFC10D;
 }
 
 /* Notes Table */

@@ -65,7 +65,7 @@ async function signupHandler(event) {
         console.error("Registeraition fialed !");
       }
       alert("Login successful");
-      window.location.href = "/Client/index.html";
+      window.location.href = "/";
     } else {
       errorMessage.textContent = result.message;
       errorMessage.style.display = "block";
@@ -101,7 +101,7 @@ async function loginHandler(event) {
         console.error("Username element or result.username is missing.");
       }
       alert("Login successful");
-      window.location.href = "/Client/index.html";
+      window.location.href = "/";
     } else {
       errorMessage.textContent = result.message;
       errorMessage.style.display = "block";

@@ -74,5 +74,5 @@ if (username) {
 }
 
 function redirectToLogin() {
-  window.location.href = "/client/login.html";
+  window.location.href = "/login.html";
 }
