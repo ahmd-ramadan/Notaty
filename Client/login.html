@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <!-- Error message display -->
+      <div class="error-message" id="error-message"></div>
+
+      <!-- Login Form -->
+      <form id="login-form" style="display: block">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="text" id="login-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required />
+        </div>
+        <button
+          type="submit"
+          class="submit-button"
+          onclick="loginHandler(event)"
+        >
+          Login
+        </button>
+
+        <!-- Link to switch to Sign Up -->
+        <p class="switch-link">
+          Don't have an account?
+          <a href="#" onclick="toggleForm('signup')">Create account</a>
+        </p>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signup-form" style="display: none">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+          <label for="signup-username">Username</label>
+          <input type="text" id="signup-username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input
+            type="password"
+            id="signup-password"
+            name="password"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          class="submit-button"
+          onclick="signupHandler(event)"
+        >
+          Sign Up
+        </button>
+
+        <!-- Link to switch to Login -->
+        <p class="switch-link">
+          Already have an account?
+          <a href="#" onclick="toggleForm('login')">Login</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="./scripts/auth-handler.js"></script>
+  </body>
+</html>
