@@ -1,42 +1,29 @@
-const mongoose = require('mongoose');
-const Validator = require('validator');
+const mongoose = require("mongoose");
+const Validator = require("validator");
 
-const usersSchema = new mongoose.Schema({
-    firstName: {
-        type: String,
-        required: true,
-    },
-    lastName: {
-        type: String,
-        required: true,
+const usersSchema = new mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: true,
     },
     email: {
-        type: String,
-        required: true,
-        unique: true,
-        validate: [Validator.isEmail, 'Filed Must Ba An Email Address'],
+      type: String,
+      required: true,
+      unique: true,
+      validate: [Validator.isEmail, "Filed Must Ba An Email Address"],
     },
     password: {
-        type: String,
-        required: true,
-    },
-    createDate: {
-        type: Date,
-        required: true,
-    },
-    avatar: {
-        type: String,
-        default: 'uploads/profile.jpeg',
-        required: true
+      type: String,
+      required: true,
     },
     token: {
-        type: String,
-    }, 
-    role: {
-        type: String,
-        enum: [userRoles.ADMIN, userRoles.MANAGER, userRoles.USER],
-        default: userRoles.USER
+      type: String,
     },
-})
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports = mongoose.model('User', usersSchema);
+module.exports = mongoose.model("User", usersSchema);
