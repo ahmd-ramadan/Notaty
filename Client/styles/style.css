@@ -6,22 +6,24 @@
 
 :root {
   --main-color: rgb(51, 51, 51);
-  --main-color-alt: #1787e0;
+  --main-color-alt: #8D0B41;
+  --second-color: #2E5077;
   --main-transition: 0.3s;
   --section-background: #ececec;
+
 }
 
 body {
   margin: 0;
-  background-color: var(--main-color);
-  color: white;
+  /* background-color: var(--main-color); */
+  /* color: white; */
   font-family: "Indie Flower", cursive;
   text-align: center;
 }
 
 /* Navigation Bar */
 .navigation-bar {
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
   height: 80px;
   padding: 0 20px;
 }
@@ -40,12 +42,12 @@ body {
 }
 .navigation-bar .left img {
   height: 60px;
-  margin-right: 10px;
+  width: 60px;
 }
 
 .navigation-bar .left svg {
   height: 60px;
-  margin-right: 3px;
+  width: 60px;
 }
 
 .navigation-bar .right {
@@ -56,7 +58,7 @@ body {
 
 #username button {
   padding: 10px 20px;
-  background-color: #FFC10D;
+  background-color: var(--second-color);
   color: white;
   border-radius: 5px;
   font-weight: bold;
@@ -64,12 +66,13 @@ body {
 }
 
 #username button:hover {
-  background-color: white;
-  color: #FFC10D;
+  background-color: transparent;
+  border: 2px solid var(--second-color);
+  color: var(--second-color);
 }
 
 #username p {
-  color: #FFC10D;
+  color: var(--second-color);
   font-weight: bold;
 }
 
@@ -107,12 +110,8 @@ body {
 
 .action-button:hover {
   background-color: white;
-  color: #FFC10D;
+  color: #8D0B41;
   font-size: 18px;
-}
-
-.action-button:focus {
-  outline: 2px solid #FFC10D;
 }
 
 /* Notes Table */
@@ -140,7 +139,7 @@ tr:nth-child(even) {
 }
 
 tr:first-child {
-  background-color: #FFC10D;
+  background-color: var(--second-color);
   color: white;
   position: sticky;
   top: 0;

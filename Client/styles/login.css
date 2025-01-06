@@ -5,13 +5,19 @@ margin: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #2E5077;
+    --second-color: #4DA1A9;
+    --error-color: #e62d2d;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: #f4f4f9;
+    background: var(--main-color);
 }
 
 /* Container for login and signup forms */
@@ -46,11 +52,6 @@ body {
     transition: background 0.3s;
 }
 
-.toggle-buttons button.active {
-    background-color: #007bff;
-    color: #fff;
-}
-
 /* Form styling */
 .form-group {
     margin-bottom: 1.2rem;
@@ -74,7 +75,7 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--main-color);
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
@@ -82,7 +83,7 @@ body {
 .submit-button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #007bff;
+    background-color: var(--second-color);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -92,12 +93,12 @@ body {
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: var(--main-color);
 }
 
 /* Error message */
 .error-message {
-    color: #d9534f;
+    color: var(--error-color);
     font-size: 0.9rem;
     font-weight: bold;
     margin-bottom: 1rem;
